@@ -1,0 +1,109 @@
+---
+title: "M11 Article Reading and Summary: Mediators and Moderators"
+subtitle: "Reading Notes on Baron and Kenny (1986)"
+author: "Yushan Huang"
+date: "2026-11-11"
+format:
+  html:
+    toc: true
+    toc-depth: 2
+    theme: cosmo
+    code-fold: true
+    embed-resources: true
+---
+
+## 1. Article Information and Purpose
+
+**Article:** Baron, R. M., & Kenny, D. A. (1986). *The moderator–mediator variable distinction in social psychological research: Conceptual, strategic, and statistical considerations*. *Journal of Personality and Social Psychology, 51*(6), 1173–1182. https://doi.org/10.1037/0022-3514.51.6.1173
+
+**Type of article:** Conceptual and methodological article, not a report of a single new empirical experiment.
+
+The authors argue that researchers should not use *moderator* and *mediator* interchangeably. They explain the conceptual difference, recommend statistical methods for testing each role, and show how both roles can appear within one causal framework. Their examples span stress and control, behavioral intentions, attitudes, and personality traits (pp. 1173–1174, 1179–1181).
+
+## 2. Central Distinction
+
+| Question | Moderator | Mediator |
+|---|---|---|
+| Main question | **When, for whom, or under what conditions** does X relate to Y? | **How or why** does X relate to Y? |
+| Function | Changes the strength or direction of the X–Y relationship. | Accounts for a process connecting X to Y. |
+| Typical model | X and Z jointly predict Y, including an **X × Z interaction**. | X influences M, which in turn influences Y. |
+| Key evidence | An interaction between predictor and moderator. | Evidence for the X → M and M → Y paths, with the X → Y association reduced after including M. |
+| Research emphasis | Identifying boundary conditions. | Explaining an underlying mechanism. |
+
+Here **X** is the predictor, **Y** is the outcome, **Z** is a moderator, and **M** is a mediator. This distinction follows the article's definitions and diagrams (Figures 1 and 3, pp. 1174 and 1176).
+
+### 2.1 Moderation: an interaction
+
+A moderator can be categorical or continuous. In the article's stress example, the effect of noise intensity on task performance depends on whether the noise is controllable or predictable. The moderation hypothesis concerns the interaction, not merely whether noise and controllability have separate main effects (p. 1174).
+
+A standard linear specification is:
+
+`Y = b0 + b1*X + b2*Z + b3*(X*Z) + error`
+
+The coefficient **b3** tests whether the relationship between X and Y varies across Z. Baron and Kenny discuss different analysis strategies depending on whether X and Z are categorical or continuous (pp. 1174–1176).
+
+### 2.2 Mediation: an explanatory pathway
+
+A mediator is part of the proposed process by which a predictor influences an outcome. The article uses a causal-path diagram containing X → M (path *a*), M → Y (path *b*), and a direct X → Y path (Figure 3, p. 1176). For example, stressors may influence outcomes partly through **perceived control**. Simply manipulating control does not establish perceived control as a mediator; the proposed psychological mechanism must also be measured (pp. 1178–1180).
+
+## 3. How the Article Recommends Testing Moderation
+
+The appropriate method depends on the measurement scales (pp. 1174–1176):
+
+| Predictor X | Moderator Z | Suggested approach in the article |
+|---|---|---|
+| Categorical | Categorical | Factorial ANOVA; inspect the interaction. |
+| Continuous | Categorical | Compare **unstandardized regression slopes** across groups rather than relying only on correlations. |
+| Categorical | Continuous | Regression with X, Z, and X × Z; specify whether moderation is linear or nonlinear. |
+| Continuous | Continuous | Product-term regression; nonlinear hypotheses may require additional polynomial terms. |
+
+The authors warn that differences in predictor variance, measurement reliability, and range restriction can distort comparisons based on correlations. Measurement error can also reduce power to detect interactions. Figure 2 (p. 1175) illustrates **linear, quadratic, and step-shaped** moderation patterns. Therefore, a theoretically justified functional form matters.
+
+## 4. How the Article Recommends Testing Mediation
+
+Baron and Kenny describe three regression equations (p. 1177):
+
+1. **Mediator equation:** regress M on X to examine whether X predicts M.
+2. **Total-association equation:** regress Y on X to examine whether X predicts Y.
+3. **Joint equation:** regress Y on both X and M to examine whether M predicts Y while X is controlled, and whether the coefficient for X decreases.
+
+In their original framework, *perfect mediation* occurs when the X coefficient is eliminated after M is included. They also recognize that **partial mediation** is often more realistic because outcomes have multiple causes (pp. 1176–1177). The article discusses Sobel's approximate test of the indirect effect and recommends attention to coefficient sizes, not just statistical significance (p. 1177).
+
+**Important interpretation note:** These are the article's **1986 recommendations**, not a claim that all three significant regression relationships are necessary under every contemporary mediation approach. Regression associations alone do not establish causal mediation; causal order, measurement quality, and alternative explanations still matter.
+
+## 5. Major Methodological Cautions
+
+- **Measurement error:** An unreliable mediator can make its estimated effect appear too small and the remaining X → Y effect appear too large. The authors discuss multiple indicators and structural equation modeling as possible remedies (p. 1177).
+- **Reverse causation / feedback:** Standard regression mediation assumes that Y does not itself cause M. The authors discuss additional designs and models for feedback (p. 1177).
+- **Interpretation of interactions:** The main effects of X and Z do not, by themselves, establish moderation; the interaction is central (p. 1174).
+- **Theory before testing:** Researchers should identify whether a third variable is hypothesized to explain a mechanism or a boundary condition, and design the measures and analysis accordingly (pp. 1178–1179).
+
+## 6. Can Moderation and Mediation Work Together?
+
+Yes. The article presents a combined framework using a **stressor (S)**, **manipulated control (C)**, **perceived control (P)**, and an **outcome (O)** (Figure 4, p. 1179). The authors first examine the manipulated factors and their interaction, then the pathways involving perceived control, and finally an interaction between perceived control and stressor. This allows a researcher to ask whether a moderation effect is itself explained by an intervening process, or whether the strength of a mediation process varies by conditions. The article discusses both **mediated moderation** and **moderated mediation** (p. 1179).
+
+## 7. Applications Discussed in the Article
+
+**Personal control and crowding.** A control manipulation may change how density affects outcomes (moderation), but a claim that perceived control explains crowding requires an independent measure of perceived control (pp. 1179–1180).
+
+**Behavioral intention and behavior.** Behavioral intention is treated as a possible mediator between attitudes/norms and behavior. A characteristic such as gender, in contrast, may moderate how strongly intention predicts behavior, which requires testing an interaction rather than merely adding a covariate (p. 1180).
+
+**Personality traits and attitudes.** Self-monitoring can identify people for whom traits better predict behavior. Researchers can then examine attention or impression-management processes as potential mediators of those differences (pp. 1180–1181).
+
+## 8. Key Takeaways and Reflection
+
+My most important takeaway is that a **moderator describes a boundary condition**, while a **mediator proposes an explanatory mechanism**. Both are useful, but they answer different research questions and require different evidence. A statistically significant interaction cannot substitute for evidence about a causal process, and a reduced regression coefficient does not automatically establish that process.
+
+For future research, I would begin by writing the hypothesis in ordinary language: “The effect of X on Y differs depending on Z” signals moderation, whereas “X affects Y through M” signals mediation. I would then draw the corresponding diagram, choose measures that match the theoretical role, and check whether the statistical model tests the stated hypothesis. The combined framework is especially useful when researchers want to explain **why an effect differs across situations or people**.
+
+## 9. Reference
+
+Baron, R. M., & Kenny, D. A. (1986). The moderator–mediator variable distinction in social psychological research: Conceptual, strategic, and statistical considerations. *Journal of Personality and Social Psychology, 51*(6), 1173–1182. https://doi.org/10.1037/0022-3514.51.6.1173
+
+## Appendix: GitHub Submission Links
+
+**GitHub Repository:** [Add the actual repository URL after publishing](https://github.com/)
+
+**GitHub Pages:** [Add the actual published Pages URL after deployment](https://pages.github.com/)
+
+
